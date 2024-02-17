@@ -1,0 +1,21 @@
+spring:
+  config.import:
+    - optional:config/database.yml
+    - optional:config/logging.yml
+    - optional:config/properties.yml
+  web.resources.add-mappings: false
+  output.ansi.enabled: always
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 25MB
+  jackson:
+    serialization:
+      indent-output: true
+
+server:
+  port: 8080
+  http2.enabled: true
+  tomcat:
+    max-http-form-post-size: 25MB
+
