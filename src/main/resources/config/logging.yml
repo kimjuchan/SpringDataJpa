@@ -1,6 +1,5 @@
 #LOCAL//DEV 환경
 #VM 옵션 : -Dspring.profiles.active= 해당 사용 값
-
 spring:
   config:
     activate:
@@ -26,7 +25,6 @@ decorator:
 
 #분할 한다는 의미.
 ---
-
 #PROD 환경
 spring:
   config:

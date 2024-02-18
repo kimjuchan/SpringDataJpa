@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 //속성값으로 등록해준다는데   아직 정확하게 이해 안감.
 @Configuration
-@EnableJpaAuditing(auditorAwareRef="audiorProvider")
+@EnableJpaAuditing(auditorAwareRef="auditorProvider")
 public class JpaAuditConfig {
     @Bean
     AuditorAware<String> auditorProvider() {

@@ -2,7 +2,6 @@ spring:
   config.import:
     - optional:config/database.yml
     - optional:config/logging.yml
-    - optional:config/properties.yml
   web.resources.add-mappings: false
   output.ansi.enabled: always
   servlet:
