@@ -18,3 +18,9 @@ server:
   tomcat:
     max-http-form-post-size: 25MB
 
+jasypt:
+  encryptor:
+    password: juchan123!@#
+
+
+

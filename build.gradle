@@ -32,10 +32,13 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
 	//Spring Data JPA 사용 시 쿼리 로그 출력 값 설정.
 	//Spring Boot 3.x 버전부터 호환
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
 	implementation 'org.apache.tika:tika-core:2.9.1'
+	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.5'
+
 
 	//Test setting
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

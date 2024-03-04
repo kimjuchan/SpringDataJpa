@@ -12,16 +12,27 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-    #show-sql: true
-    #초기 데이터 설정 여부
-    #defer-datasource-initialization: true
-    #properties:
-      #hibernate:
+        #show-sql: true
+        #초기 데이터 설정 여부
+        #defer-datasource-initialization: true
+        #properties:
+        #hibernate:
         #쿼리 값 정렬 설정
-        #format_sql: true
+      #format_sql: true
 ---
 #PROD 환경 (STUDY 용이라 실제 설정 값은 없음. 사용 형식만 익혀두는걸로)
+
 spring:
   config:
     activate:
       on-profile: prod
+  datasource:
+    #jayspt  DB 정보 암호화 설정.
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ENC(d92Uwy+NUiZFyAohveVu0l5oWJHKndK1UlIGKn2pucA5rNLgrNzLjLP9+KvpSeTLfMyx7TUaa0MA963ZJCGrurH4sOtngab31wHAlVqhRvg=)
+    username: ENC(JJ9USBV1ouxCHg81hCbS/vXxl0d7tDSWuOD1em3/Two3+ZnJoKLUWHcNFZfgdEis)
+    password: ENC(+XnnkIVL4xQCPfEzs/eUb3AEJ53BOjLr9tfxiJRZbjs+aA2hdlCofbptJgE00BeF)
+  jpa:
+    hibernate:
+      ddl-auto: create
+
