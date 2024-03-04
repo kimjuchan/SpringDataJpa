@@ -20,7 +20,7 @@ spring:
         #쿼리 값 정렬 설정
       #format_sql: true
 ---
-#PROD 환경 (STUDY 용이라 실제 설정 값은 없음. 사용 형식만 익혀두는걸로)
+#PROD 환경 (jasypt 암호화 처리)
 
 spring:
   config:
