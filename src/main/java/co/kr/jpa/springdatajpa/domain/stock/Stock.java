@@ -18,13 +18,17 @@ public class Stock extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long quantity;
-
     private Long productId;
+
+    private Long quantity;
 
     @Version
     private Long version;
 
+    public Stock(Long id, Long quantity) {
+        this.id = id;
+        this.quantity = quantity;
+    }
 
     public void decrease(final Long quantity){
         if(this.quantity - quantity < 0) throw new RuntimeException("재고가 부족합니다.");

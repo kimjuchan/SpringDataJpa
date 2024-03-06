@@ -28,5 +28,8 @@ public class Orders extends BaseEntity {
     @Enumerated(value=EnumType.STRING)
     private OrderStatus orderStatus;
 
+    @Column(nullable = false)
+    private String orderName;
+
     //oneToMany order_item
 }

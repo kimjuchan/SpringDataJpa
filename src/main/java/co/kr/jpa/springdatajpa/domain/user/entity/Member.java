@@ -22,6 +22,11 @@ public class Member {
     private String phoneNumber;
 
     @ManyToOne
+    @JoinColumn(name="team_id",updatable = false,insertable = false)
     Team team;
 
+    public void addTeam(Team team){
+        this.team = team;
+        team.getMemberList().add(this);
+    }
 }

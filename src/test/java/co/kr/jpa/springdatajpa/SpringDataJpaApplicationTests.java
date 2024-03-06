@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.*;
 
-@SpringBootTest
-//test 불가능한데... 사유 확인해봐야함...
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class SpringDataJpaApplicationTests {
 
 
@@ -30,6 +30,7 @@ class SpringDataJpaApplicationTests {
 		Member mem = new Member();
 		Team teamA = new Team();
 		teamA.setTeamName("teamA");
+
 		mem.setTeam(teamA);
 		mem.setPhoneNumber("010-1234-1234");
 		mem.setUserName("juchan");
